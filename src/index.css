@@ -1,0 +1,74 @@
+/* Chatbot.css */
+.chatbot-container {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 50%;
+  margin: 20px auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 50%;
+}
+
+.chatbot-messages {
+  padding: 20px;
+}
+
+.message, .que {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.message {
+  text-align: start;
+}
+.que {
+  text-align: end;
+}
+
+.user-message {
+  background-color: #f0f0f0;
+}
+
+.bot-message {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.chatbot-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.chatbot-input input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-input button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 640px) {
+  .chatbot-container  {
+    width: 90%;
+  }
+}
