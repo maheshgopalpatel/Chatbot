@@ -39,6 +39,12 @@
   background-color: #007bff;
   color: #fff;
 }
+.result{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+}
 
 .chatbot-input {
   display: flex;
