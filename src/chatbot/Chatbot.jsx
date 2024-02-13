@@ -26,7 +26,6 @@ function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [que, setQue] = useState(0);
-  console.log(final);
   const handleSendMessage = () => {
     if (inputValue.trim() !== "" && hiringQuestions.length > que + 1) {
       setMessages([...messages, { text: inputValue, sender: "user" }]);
@@ -42,10 +41,9 @@ function Chatbot() {
   // console.log(que, hiringQuestions.length);
   const resultHandler = (value) => {
     if (value == "cancel") {
-      console.log("@@@@@@@@@@@@");
       setInputValue("");
-      setMessages([])
-      setQue(0)
+      setMessages([]);
+      setQue(0);
     } else {
       setInputValue("completed");
     }
@@ -63,13 +61,29 @@ function Chatbot() {
     <div className="chatbot-container">
       <div className="chatbot-messages">
         {inputValue == "completed" ? (
-          <div className="result">
+          <div className="result" style={{ border: "2px solid gray" }}>
             {Object.values(final).map((item, i) => {
               let arr = Object.keys(final);
               return (
                 <>
-                  <div>{arr[i]}</div>
-                  <div>{item}</div>
+                  <div
+                    style={{
+                      border: "2px solid gray",
+                      minHeight: "30px",
+                      padding: "15px 8px 0",
+                    }}
+                  >
+                    {arr[i]}
+                  </div>
+                  <div
+                    style={{
+                      border: "2px solid gray",
+                      minHeight: "30px",
+                      padding: "15px 8px 0",
+                    }}
+                  >
+                    {item}
+                  </div>
                 </>
               );
             })}
